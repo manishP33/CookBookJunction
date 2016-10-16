@@ -17,15 +17,15 @@ ActiveRecord::Schema.define(version: 20161014175120) do
 
   create_table "cookbooks", force: :cascade do |t|
     t.integer  "num_recipes",       null: false
-    t.integer  "recipe_blogger_id"
+    t.integer  "recipeblogger_id"
     t.integer  "recipe_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.index ["recipe_blogger_id"], name: "index_cookbooks_on_recipe_blogger_id", using: :btree
+    t.index ["recipeblogger_id"], name: "index_cookbooks_on_recipeblogger_id", using: :btree
     t.index ["recipe_id"], name: "index_cookbooks_on_recipe_id", using: :btree
   end
 
-  create_table "recipe_bloggers", force: :cascade do |t|
+  create_table "recipebloggers", force: :cascade do |t|
     t.string   "name"
     t.text     "img_url"
     t.string   "location"
@@ -37,11 +37,11 @@ ActiveRecord::Schema.define(version: 20161014175120) do
     t.string   "name"
     t.text     "img_url"
     t.text     "recipe"
-    t.integer  "recipe_blogger_id"
+    t.integer  "recipeblogger_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
 
-  add_foreign_key "cookbooks", "recipe_bloggers"
+  add_foreign_key "cookbooks", "recipebloggers"
   add_foreign_key "cookbooks", "recipes"
 end

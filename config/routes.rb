@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'recipe_bloggers#index'
+  root to: "recipebloggers#index"
 
-  resources :recipe_bloggers
+  resources :recipebloggers
     resources :recipes
 
 end
