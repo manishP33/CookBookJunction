@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "recipebloggers#index"
+  
+  root to: "bloggers#index"
 
-  resources :recipebloggers
-    resources :recipes
+  resources :bloggers do
+    resources :recipes, except: [:index, :show]
+  end
+  resources :recipes, only: [:index, :show] do
+      member do
+        post 'add_cookbook'
+        delete 'remove_cookbook'
+      end
+    end
 
 end

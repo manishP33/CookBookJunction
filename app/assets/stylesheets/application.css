@@ -1,15 +1,59 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  background-color: white;
+  background-image: url("http://cdn23.us1.fansshare.com/photos/sandwich/super-sandwich-food-wallpaper-1624992494.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.logo {
+  background-color: grey;
+  border: 5px solid black;
+  border-radius: 20px;
+  opacity: 0.5;
+  height: 150px;
+}
+h1.logoFont {
+  font-family: 'Faster One', cursive;
+  font-size: 90px;
+}
+
+h1, h2{
+  text-align: center;
+  font-size: 60px;
+  text-shadow: 2px 2px red;
+  font-family: 'Molle', cursive;
+}
+
+img {
+  border: 5px double black;
+  width: 300px;
+  height: 300px;
+  margin
+}
+
+img.face {
+  border: 5px double black;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+
+}
+#recipe {
+  text-align: center;
+  justify-content: center;
+  font-size: 40px;
+
+}
+.recshow {
+  text-align: center;
+  border: 5px solid black;
+  width: 600px;
+
+}
+.edform {
+   border: 3px solid black;
+   width: 50%;
+   height: 600px;
+   text-align: center;
+   font-size: 30px;
+}

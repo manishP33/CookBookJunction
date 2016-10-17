@@ -1,0 +1,6 @@
+<h2><%= @recipe.name %> <%= link_to "(Edit)", edit_blogger_recipe_path(@recipe.bloggers, @recipe)  %> </h2>
+<h3>By: <%= @recipe.bloggers.name %></h3>
+
+
+
+<img src="<%= @recipe.img_url %>">

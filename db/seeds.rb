@@ -1,10 +1,10 @@
-RecipeBlogger.destroy_all
+Blogger.destroy_all
 Recipe.destroy_all
 
-david = RecipeBlogger.create(name: "David", img_url: "", location: "Washington, DC")
-sam = RecipeBlogger.create(name: "Sam", img_url: "", location: "Laurel, MD")
-bob = RecipeBlogger.create(name: "Bob", img_url: "", location: "Miami, FL")
-norma = RecipeBlogger.create(name: "Norma", img_url: "", location: "Cleveland, OH")
+david = Blogger.create(name: "David", img_url: "http://findicons.com/files/icons/1072/face_avatars/300/d05.png", location: "Washington, DC")
+sam = Blogger.create(name: "Sam", img_url: "http://herocycles.com/cyclingheroes/images/Male-Face-L3-icon.png", location: "Laurel, MD")
+bob = Blogger.create(name: "Bob", img_url: "http://findicons.com/files/icons/1072/face_avatars/300/b04.png", location: "Miami, FL")
+norma = Blogger.create(name: "Norma", img_url: "http://findicons.com/files/icons/1072/face_avatars/300/fd05.png", location: "Cleveland, OH")
 
 
 grillchicken = Recipe.create(name: "Grill Whiskey Chicken Foil Packets", img_url: "http://consumerrecipe.conagrafoods.com/uploadedImages/img_8152_9227.jpg", recipe: "Ingredients
@@ -25,7 +25,9 @@ Preheat gas grill for medium-high heat. Whisk together whiskey, ginger, agave, s
 Place four 18x12-inch pieces of heavy aluminum foil on counter. Spray each with cooking spray. Divide rice evenly and place on each piece of foil. Top each with chicken thigh and sprinkle with salt. Carefully fold edges of foil upward; pour about 1/3 cup sauce mixture into each packet over chicken. Double fold top and ends of each piece of foil, leaving space for steam to gather.
 Place packets on grate; cover grill. Grill 15 to 20 minutes or until chicken is no longer pink (180°F) and rice is tender. Carefully open packets; sprinkle with green onion, if desired.
 Cook's Tips
-Packets may be baked on shallow pan in 425°F oven 25 to 30 minutes or until chicken is cooked through (180°F) and rice is tender.", recipeblogger_id: 1)
+Packets may be baked on shallow pan in 425°F oven 25 to 30 minutes or until chicken is cooked through (180°F) and rice is tender.", blogger_id: 1)
+
+
 bbqchicken = Recipe.create(name: "BBQ Chicken Dip", img_url: "http://consumerrecipe.conagrafoods.com/uploadedImages/img_8171_9243.jpg", recipe: "Ingredients
 2 cups Hunt's® Tomato Ketchup
 1/2 cup firmly packed brown sugar
@@ -43,7 +45,9 @@ In a blender puree together the ketchup, brown sugar, cider vinegar, molasses, W
 Place the chopped rotisserie chicken, cream cheese and BBQ sauce into a slow cooker on HIGH heat for 30 minutes or until the cheese has melted.
 Mix together and place in oven-safe container; top off with the shredded cheese.
 Place on a sheet pan and bake in the oven for 20 to 25 minutes or until the cheese has completely melted.
-Serve dip in bread bowl or with tortilla chips, if desired.", recipeblogger_id: 2)
+Serve dip in bread bowl or with tortilla chips, if desired.", blogger_id: 2)
+
+
 spicychicken = Recipe.create(name: "Spicy Siracha Chicken", img_url: "http://consumerrecipe.conagrafoods.com/uploadedImages/img_8032_8831.jpg", recipe: "Ingredients
 1 can (6 oz each) Hunt's® Tomato Paste (or try Hunt's® Organic)
 2/3 cup reduced-sodium chicken broth
@@ -60,7 +64,9 @@ Stir together tomato paste, broth, Sriracha, honey, lime juice and garlic in 12-
 Bring tomato mixture to a boil over medium-high heat. Reduce heat to medium-low, cover and cook 5 minutes. Turn chicken over; cook 5 minutes more or until chicken is no longer pink in centers (165°F).
 Sprinkle with green onions and serve with hot cooked rice, if desired.
 Cook's Tips
-To make less spicy, reduce Sriracha sauce to 3 tablespoons.", recipeblogger_id: 3)
+To make less spicy, reduce Sriracha sauce to 3 tablespoons.", blogger_id: 3)
+
+
 pestochicken = Recipe.create(name: "Pesto Chicken Stromboli", img_url: "http://consumerrecipe.conagrafoods.com/uploadedImages/img_7577_7690.jpg", recipe: "Ingredients
 PAM® Original No-Stick Cooking Spray
 1 can (14.5 oz each) Hunt's® Diced Tomatoes, drained well
@@ -73,7 +79,9 @@ PAM® Original No-Stick Cooking Spray
 Directions
 Preheat oven to 400°F. Spray large baking sheet with cooking spray; set aside. Stir together drained tomatoes, Italian cheese, onion and pesto in medium bowl. Add chicken; stir to combine.
 Unroll pizza dough on baking sheet; press into 14x10-inch rectangle. Spread chicken mixture evenly over dough to within 1-inch of each edge. Roll up, starting with a long edge, to enclose filling. Place seam side down. Fold ends under, pinching together to seal. Sprinkle Parmesan cheese over top of dough.
-Bake 30 minutes or until golden brown. Cool 5 minutes; cut into 12 slices.", recipeblogger_id: 4)
+Bake 30 minutes or until golden brown. Cool 5 minutes; cut into 12 slices.", blogger_id: 4)
+
+
 chickenparmesan = Recipe.create(name: "Chicken Parmesan", img_url: "http://consumerrecipe.conagrafoods.com/uploadedImages/img_6937_6021.JPEG", recipe: "Ingredients
 1 can (15 oz each) OR 1 carton (14.8 oz) Hunt's® Tomato Sauce
 1 can (14.5 oz each) Hunt's® Diced Tomatoes with Basil, Garlic and Oregano, undrained
@@ -85,7 +93,9 @@ Directions
 Heat oven to 375°F.
 Pour tomato sauce and undrained tomatoes into 13x9-inch baking dish. Stir in 1/4 cup (4 tablespoons) Parmesan. Add chicken; turn to coat evenly both sides of each breast with sauce. Cover.
 Bake 30 minutes or until chicken is no longer pink in centers (165°F). Meanwhile, cook spaghetti as directed on package, omitting salt.
-Top chicken with remaining cheeses; bake, uncovered, 5 minutes or until mozzarella is melted. Drain spaghetti. Serve topped with chicken and sauce.", recipeblogger_id: 2)
+Top chicken with remaining cheeses; bake, uncovered, 5 minutes or until mozzarella is melted. Drain spaghetti. Serve topped with chicken and sauce.", blogger_id: 2)
+
+
 chickentinga = Recipe.create(name: "Chicken Tinga", img_url: "http://consumerrecipe.conagrafoods.com/uploadedImages/img_6154_9051.jpg", recipe: "Ingredients
 PAM® Original No-Stick Cooking Spray
 1-1/4 pounds boneless skinless chicken thighs
@@ -100,4 +110,4 @@ Hot cooked rice, optional
 Directions
 Spray large skillet with cooking spray; heat over medium-high heat. Add chicken; sprinkle with garlic salt and cook 3 to 5 minutes or until browned on both sides.
 Add onion; cook until tender. Add drained tomatoes, tomato sauce and peppers; stir to combine. Reduce heat to low; simmer 20 minutes, stirring occasionally.
-Remove chicken from skillet; shred with two forks. Return chicken to sauce mixture; stir to combine. Sprinkle each serving with cheese and avocado. Serve with rice, if desired.", recipeblogger_id: 1)
+Remove chicken from skillet; shred with two forks. Return chicken to sauce mixture; stir to combine. Sprinkle each serving with cheese and avocado. Serve with rice, if desired.", blogger_id: 1)

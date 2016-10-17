@@ -1,0 +1,21 @@
+<h2>Bloggers Details</h2>
+<h2><%= @blogger.name %> <a href="/bloggers/<%= @blogger.id %>/edit">(edit)</a></h2>
+<h4><%= @blogger.location %></h4>
+
+<img class='blogger-img' src="<%= @blogger.img_url %>">
+
+<h3>Recipes <%= link_to "(Add)", new_blogger_recipe_path(@blogger) %></h3>
+<ul>
+  <% @blogger.recipes.each do |recipe| %>
+    <li>
+      <%= link_to "#{recipe.name}", recipe_path(recipe) %>
+      <!-- Note: will throw an error without proper model definitions + associations  -->
+      <% if recipe.users.include? current_user %>
+        <%= link_to "&hearts;".html_safe, remove_favorite_recipe_path(recipe), method: :delete, class: "fav" %>
+      <% else %>
+        <%= link_to "&hearts;".html_safe, add_favorite_recipe_path(recipe), method: :post, class: "no-fav" %>
+      <% end %>
+    </li>
+
+  <% end %>
+</ul>

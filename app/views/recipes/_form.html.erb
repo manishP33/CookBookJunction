@@ -1,0 +1,14 @@
+<%= form_for([@blogger, @recipe]) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :recipe %>
+  <%= f.text_field :recipe %><br>
+
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %><br>
+
+  <%= f.submit %>
+
+<% end %>
