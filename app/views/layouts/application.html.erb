@@ -12,21 +12,17 @@
     <div id="sidebar">
     <div id="logo">
       <%= link_to root_path do %>
-      <%= image_tag "logo.png" %>
+      <img class="weblogo" src="http://joanholcombcookbooks.com/wp-content/uploads/2012/05/cooking-logo-cookbooks.jpg" >
       <% end %>
     </div>
-    <ul>
-      <li class="category">Website</li>
-      <li><%= link_to "Cookbook", root_path %></li>
-      <li><%= link_to "About", about_path %></li>
-    </ul>
 
-    <ul>
-      <li class="category">Social</li>
-      <li><button class="button"><a href="#">Twitter</a></button></li>
-      <li><a href="#">Facebook</a></li>
-      <li><a href="#">Email</a></li>
-    </ul>
+      <h3>Website</h3><br>
+      <button class="button"><%= link_to "Cookbook", root_path %></button><br>
+      <button class="button"><%= link_to "About", about_path %></button><br>
+      <h3>Find me</h3><br>
+      <button class="button"><a href="#">Twitter</a></button><br>
+      <button class="button"><a href="#">Facebook</a></button><br>
+      <button class="button"><a href="#">Email</a></button>
 
     <% if !user_signed_in? %>
 			<p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>
@@ -49,7 +45,14 @@
         <div class="buttons">
           <button class="button"><%= link_to "New Recipes", new_recipe_path %></button>
 
-          <button class="button">Log Out</button>
+          <% if !current_user %>
+  <button class="button"><%= link_to "Sign up", new_user_registration_path %></button>
+  <button class="button"><%= link_to "Sign in", new_user_session_path %></button>
+<% else %>
+  <button class="button"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></button>
+    <%= current_user.email %>
+<% end %>
+
         </div>
 
       </div>

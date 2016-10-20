@@ -29,11 +29,22 @@ a {
 	background: skyblue;
 	padding: 7em 0 0 0;
 	border-right: 1px solid #d6dce0;
+	text-align: center;
 }
-/*	#sidebar#logo {
-		width: 40px;
+img.weblogo {
+	width: 190px;
+	border: 5px double grey;
+}
+img {
+	width: 300px;
+
+}
+/*	#logo.image_tag {
+		border: 4px solid black;
+		width: 10px;
+		height: 10px;
 		position: absolute;
-		right: 3em;
+		right: 2em;
 		top: 3em;
 	}
 	#sidebar.ul {
@@ -75,17 +86,18 @@ a {
 
 .button {
 	outline: none;
-	background: skyblue;
-	border: 1px solid #d6dce0;
+	background: lightgrey;
+	border: 1px solid grey;
 	padding: .5em 1.5em;
 	border-radius: 1.5em;
+	font-size: 17px;
 }
 	.button:hover {
 		border: 1px solid #33acb7;
 		color: #33acb7;
 	}
 		.button.a {
-			color: #33acb7 !important;
+			color: #33acb7;
 		}
 
 .clearfix:after {
