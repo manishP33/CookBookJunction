@@ -1,4 +1,6 @@
 # README
+
+# README
 # Project2 - CooKBook Junction
 This project is about a website where users can share each others recipes. It is built with Ruby on rails. Planning and making ERDs was easy part but had some difficulty in coding.
 # User Story :

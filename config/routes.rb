@@ -1,15 +1,10 @@
 Rails.application.routes.draw do
-  
-  root to: "bloggers#index"
-
-  resources :bloggers do
-    resources :recipes, except: [:index, :show]
+  devise_for :users
+  resources :recipes do
+    resources :comments
   end
-  resources :recipes, only: [:index, :show] do
-      member do
-        post 'add_cookbook'
-        delete 'remove_cookbook'
-      end
-    end
 
+  root "recipes#index"
+
+  get "/about", to: "pages#about"
 end

@@ -1,13 +1,10 @@
-<h1>Recipes</h1>
-
-  <% @recipes.each do |recipe| %>
-  <div class="recshow">
-
-      <a id="recipe" href="/recipes/<%= recipe.id %>">
-        <%= recipe.name %>
-      </a><br>
-      <img src="<%= recipe.img_url %>">
-      <%= recipe.recipe %>
-
-    </div>
-  <% end %>
+<h1>Awesomeness begins here...</h1>
+<% @recipes.each do |recipe| %>
+<div class="post_wrapper">
+  <h2 class="name"><%= link_to recipe.name, recipe %></h2>
+  <img src="<%= recipe.img_url %>">
+  <p class="date">
+    <%= recipe.created_at.strftime("%B, %d, %Y") %>
+  </p>
+</div>
+<% end %>
