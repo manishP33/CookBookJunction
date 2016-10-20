@@ -1,4 +1,4 @@
-@import "normalize";
+/*@import "normalize";*/
 
 html, body {
 	font-family: 'Raleway', sans-serif;
@@ -245,7 +245,7 @@ img {
 	}
 	.links {
 		margin: 2em 0;
-	}
+	}*/
 	input[type="text"], input[type="email"], input[type="password"], textarea {
 		width: 90%;
 		border: 1px solid #d6dce0;
@@ -274,4 +274,4 @@ img {
 			color: #33acb7;
 		}
 	}
-}*/
+}
