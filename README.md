@@ -1,29 +1,23 @@
 # README
 
 # Project2 - CooKBook Junction
-This project is about a website where users can share each others recipes. It is built with Ruby on rails. Planning and making ERDs was easy part but had some difficulty in coding.
+This project is about a website where users can share each others recipes. A kind of food blogging too. It is built on Ruby on rails. Planning and making ERDs was easy part but had some difficulty in coding. So as I was progressing, made many changes to the project.
 # User Story :
 
-1.As a user, if i click on start button, I should see the game page.
+1.As a user, if i click on homepage button/cookbook icon/website logo, I should see the home page or index page.
 
-2.As a user, clicking Play again button, should give me random line or word to play with.
+2.As a user, clicking sign up, should give me authorization for as member-user.
 
-3.As a user, choosing the right letters and finding out the correct answer should make me winner.
+3.Clicking on new recipe, gives me permission to create new recipe but as authorize user only.
 
-4.As a user, I should be able to track number of lives left while playing.
+4.As a authorize user, I should be able to edit, create and delete blogs/ recipes.
 
-5.As a user, I should be able to see the animation of hangman on screen as I play along.
+5.As a anonymous user, I should be able able see selected recipes and comment on them.
 
-6.While playing I should get notice of winning  and loosing results.
+6.About button should give me info about the website.
 
 # Unsolved problems:
-* Working on setting timer for game, need to fix some code to execute it.
-
-
-# For fonts:
-https://fonts.googleapis.com/css?family=UnifrakturCook:700
-
-https://fonts.googleapis.com/css?family=Chicle
+* Working on setting proper authentication of users and admin.
 
 
 
