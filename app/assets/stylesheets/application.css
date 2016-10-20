@@ -24,7 +24,7 @@ a {
 	width: 200px;
 	position: fixed;
 	left: 0;
-	top: 0;
+	top: 80px;
 	height: 100%;
 	background: skyblue;
 	padding: 7em 0 0 0;
@@ -34,6 +34,9 @@ a {
 img.weblogo {
 	width: 190px;
 	border: 5px double grey;
+	position: fixed;
+	left: 0;
+	top: 0;
 }
 img {
 	width: 300px;
@@ -273,4 +276,3 @@ img {
 			border: 1px solid #33acb7;
 			color: #33acb7;
 		}
-	
