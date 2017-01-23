@@ -1,11 +1,14 @@
-<h1>Awesomeness begins here...</h1>
-<% @recipes.each do |recipe| %>
-<div class="post_wrapper">
-  <h2 class="name"><%= link_to recipe.name, recipe %></h2>
-  <img src="<%= recipe.img_url %>">
-  <p class="date">
-    <%= recipe.created_at.strftime("%B, %d, %Y") %>
-  </p>
+<div class="container" id="index">
+  <h1>Awesomeness begins here...</h1>
+  <% @recipes.each do |recipe| %>
+  <div class="col-sm-5">
+    <h3 class="name"><%= link_to recipe.name, recipe %></h3>
+    <img src="<%= recipe.img_url %>">
+    <p class="date">
+      <%= recipe.created_at.strftime("%B, %d, %Y") %>
+    </p>
+
+  </div>
+  <% end %>
 
 </div>
-<% end %>

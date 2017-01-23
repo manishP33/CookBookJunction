@@ -1,33 +1,36 @@
-<div id="post_content">
-  <h1 class="name">
-  <%= @recipe.name %>
-  </h1>
+<div class="container">
+  <div id="post_content">
+    <h1 class="name">
+    <%= @recipe.name %>
+    </h1>
 
-  <p class="date">
-    Submitted <%= time_ago_in_words(@recipe.created_at) %>Ago
-    <% if user_signed_in? %>
-    <%= link_to "[Edit]", edit_recipe_path(@recipe) %>
-    <%= link_to "[Delete]", recipe_path(@recipe), method: :delete, data: {confirm: "Are you sure?"} %>
-    <% end %>
-  </p>
+    <p class="date">
+      Submitted <%= time_ago_in_words(@recipe.created_at) %>Ago
+      <% if user_signed_in? %>
+      <%= link_to "[Edit]", edit_recipe_path(@recipe) %>
+      <%= link_to "[Delete]", recipe_path(@recipe), method: :delete, data: {confirm: "Are you sure?"} %>
+      <% end %>
+    </p>
 
-  <p class="ingredients">
-    <%= @recipe.ingredients %>
-  </p>
+    <p class="ingredients">
+      <%= @recipe.ingredients %>
+    </p>
 
-  <p class="direction">
-    <%= @recipe.direction %>
-  </p>
+    <p class="direction">
+      <%= @recipe.direction %>
+    </p>
 
-  <p class="img_url">
-    <%= @recipe.img_url %>
-  </p>
+    <p class="img_url">
+      <%= @recipe.img_url %>
+    </p>
 
 
-    <div id="comments">
-      <h2><%= @recipe.comments.count %>Comments</h2>
-      <%= render @recipe.comments %>
-      <h3>Add a comment:</h3>
-      <%= render "comments/form" %>
-    </div>
+      <div id="comments">
+        <h2><%= @recipe.comments.count %>Comments</h2>
+        <%= render @recipe.comments %>
+        <h3>Add a comment:</h3>
+        <%= render "comments/form" %>
+      </div>
+  </div>
+
 </div>
